@@ -1,0 +1,21 @@
+Sistema de Gerenciamento de Usuário
+
+Requisito
+
+-Java versão 8 ou superior
+
+
+Instalação
+
+-Clone o projeto com o comando
+ git clone https://github.com/cesarcarbonecarneiro/Sistema-Gerenciamento.git
+
+-Obter o pacote Spring Tools em https://spring.io/tools
+
+-Executar o arquivo C:\Spring Tools\sts-4.6.1.RELEASE\SpringToolSuite4
+
+-Em file->import escolher a opção Maven\Existing Maven Projects, em Browser, pesquise o caminho do arquivo e finalize a ação.
+
+-Clique em "Crtl+F11" para executar a aplicação e abra o caminho https://localhost:8080 no navegador.
+
+-Para vizualizar a programação e realizar os testes unitario, utilizar a IDE Eclipse.

@@ -31,10 +31,7 @@ public class PerfilController {
 	}
 	
 	@PostMapping("/salvar")
-	public String salvar(@Valid Perfil perfil,BindingResult result, RedirectAttributes attr) {
-		if(result.hasErrors()) {
-			return "/perfil/cadastro";
-		}
+	public String salvar( Perfil perfil, RedirectAttributes attr) {
 		service.salvar(perfil);
 		attr.addFlashAttribute("sucess","Perfil inserido com sucesso.");
 		return "redirect:/perfil/cadastrar";
@@ -47,10 +44,7 @@ public class PerfilController {
 	}
 	
 	@PostMapping("/editar")
-	public String editar(@Valid Perfil perfil,BindingResult result,RedirectAttributes attr) {
-		if(result.hasErrors()) {
-			return "/perfil/cadastro";
-		}
+	public String editar( Perfil perfil,RedirectAttributes attr) {
 		service.editar(perfil);
 		attr.addFlashAttribute("sucess","Perfil editado com sucesso.");
 		return "redirect:/perfil/cadastrar";

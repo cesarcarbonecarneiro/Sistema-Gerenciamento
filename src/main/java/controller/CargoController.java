@@ -32,10 +32,7 @@ public class CargoController {
 	}
 	
 	@PostMapping("/salvar")
-	public String salvar(@Valid Cargo cargo, BindingResult result, RedirectAttributes attr) {
-		if(result.hasErrors()) {
-			return "redirect:/cargo/cadastro";
-		}
+	public String salvar(Cargo cargo,RedirectAttributes attr) {
 		cargoService.salvar(cargo);
 		attr.addFlashAttribute("sucess","Cargo inserido com sucesso.");
 		return "redirect:/cargo/cadastrar";
@@ -48,10 +45,7 @@ public class CargoController {
 	}
 	
 	@PostMapping("/editar")
-	public String editar(@Valid Cargo cargo, BindingResult result,RedirectAttributes attr) {
-		if(result.hasErrors()) {
-			return "/cargo/cadastro";
-		}
+	public String editar( Cargo cargo,RedirectAttributes attr) {
 		cargoService.editar(cargo);
 		attr.addFlashAttribute("sucess","Cargo editado com sucesso.");
 		return "redirect:/cargo/cadastrar";

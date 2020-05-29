@@ -24,8 +24,6 @@ public class Cargo extends AbstractEntity<Long>{
 		this.id = id;
 	}
 
-	@NotBlank(message="Informe um nome.")
-	@Size(min=3,ma=60,message="O nome do departamento derá conter entre {min} e {ma} carateres.")
 	@Column(name="nome",nullable=false,unique=true,length=50)
 	private String nome;
 
